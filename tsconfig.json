@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "types": ["chrome"],        // 👈 add this line
+    "strict": true,
+    "jsx": "preserve",
+    "baseUrl": "."
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts"]
+}

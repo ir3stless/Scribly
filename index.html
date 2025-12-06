@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/scribly-logo.png" />
+    <link rel="apple-touch-icon" href="/scribly-logo.png" />
+    <title>Quick Notes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div id="app" class="container">
+      <header class="header">
+        <div class="brand">
+          <img
+            class="brand-logo"
+            src="/scribly-logo.png"
+            width="28"
+            height="28"
+            alt="Scribly mascot"
+            decoding="async"
+            fetchpriority="high"
+          />
+          <div class="brand-text">
+            <h1>Scribly</h1>
+            <p class="subtitle">Instant notes. Zero friction.</p>
+          </div>
+        </div>
+        <span class="badge">v1.0</span>
+      </header>
+
+      <section class="composer">
+        <label class="sr-only" for="note-input">New note</label>
+        <textarea
+          id="note-input"
+          placeholder="Jot something down… (Ctrl/Cmd+Enter to add)"
+          rows="4"
+        ></textarea>
+
+        <div class="actions">
+          <button id="add-note-btn" class="btn btn-primary">
+            <span class="btn-icon" aria-hidden="true">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11 4a1 1 0 1 1 2 0v7h7a1 1 0 1 1 0 2h-7v7a1 1 0 1 1-2 0v-7H4a1 1 0 1 1 0-2h7V4z"/>
+              </svg>
+            </span>
+            Add note
+          </button>
+          <button id="clear-all-btn" class="btn btn-ghost">Clear all</button>
+        </div>
+      </section>
+
+      <section class="list">
+        <ul id="notes-list" class="notes"></ul>
+
+        <!-- empty state (shown by JS when list is empty, here as reference)
+        <div class="empty">
+          <div class="empty-icon" aria-hidden="true">📝</div>
+          <div class="empty-title">No notes yet</div>
+          <div class="empty-sub">Start by writing something above.</div>
+        </div>
+        -->
+      </section>
+
+      <footer class="footer">
+        <div class="hint">Synced via <code>chrome.storage.sync</code></div>
+        <div class="links">
+          <a class="link" href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
