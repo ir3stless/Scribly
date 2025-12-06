@@ -3,7 +3,7 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
-    "types": ["chrome"],        // 👈 add this line
+    "types": ["chrome"],
     "strict": true,
     "jsx": "preserve",
     "baseUrl": "."
