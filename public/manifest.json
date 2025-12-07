@@ -17,5 +17,8 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "permissions": ["storage"]
+  "permissions": ["storage"],
+  "web_accessible_resources": [
+  { "resources": ["fonts/**"], "matches": ["<all_urls>"] }
+]
 }
